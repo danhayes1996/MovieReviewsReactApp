@@ -3,7 +3,10 @@ import axios from 'axios';
 
 import {IconButton} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
-import {API_MOVIES_FIND, API_MOVIE_GET} from '../../Constants/api-const';
+
+import SearchResultsComponent from './SearchResults';
+
+import {API_MOVIES_FIND} from '../../Constants/api-const';
 
 import './SearchBar.css';
 
@@ -41,19 +44,6 @@ export default class SearchBarComponent extends Component {
             });
     }
 
-    showMovie(movieId) {
-        axios.get(API_MOVIE_GET + movieId)
-            .then(value => {
-                console.log(value.data);
-            }).catch(error => {
-                if(!error.response) {
-                    console.log("Error: Couldn't connect to API");
-                } else {
-                    console.error(error);
-                }
-            });
-    }
-
     showResults() {
         this.setState({showResults: true});
     }
@@ -63,25 +53,14 @@ export default class SearchBarComponent extends Component {
     }
 
     render() {
-        let searchResults;
-        if(this.state.showResults) {
-            searchResults = (
-                <div id="searchResults">
-                    {this.state.results.map((result, index) => {
-                        return (
-                            <div key={"result" + index} className="search-res" onClick={ () => this.showMovie(result.id)}>
-                                <p>{result.name}</p>
-                            </div>
-                        );
-                    })}
-                </div>
-            );
-        }
+        let searchResults = (this.state.showResults) 
+            ? <SearchResultsComponent results={this.state.results} /> 
+            : null;
 
         return (
             <div id="searchContainer">
                 <div id="searchBar">
-                    <input id="search-txt" type="text" onKeyUp={this.findMovies} /*onBlur={this.hideResults}*/ />
+                    <input id="search-txt" type="text" autoComplete="off" onKeyUp={this.findMovies} /*onBlur={this.hideResults}*/ />
                     <IconButton id="search-btn" aria-label="delete">
                         <SearchIcon fontSize="small" />
                     </IconButton>

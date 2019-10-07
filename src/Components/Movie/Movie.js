@@ -3,21 +3,22 @@ import axios from 'axios';
 
 import NavBarComponent from '../NavBar/NavBar';
 
-export default class HomeComponent extends Component {
+import {API_MOVIE_GET} from '../../Constants/api-const';
 
-    constructor(){
-        super();
+export default class MovieComponent extends Component {
+
+    constructor(props){
+        super(props);
         this.state = {
-            movies: []
+            movieId: this.props.match.params.id
         };
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/movie/all')
+        axios.get(API_MOVIE_GET + this.state.movieId)
             .then(value => {
-                console.log(value);
-                this.setState({movies: value.data});
-            }).catch(error =>{
+                console.log("movie:", value.data);
+            }).catch(error => {
                 if(!error.response) {
                     console.error("Error: Couldn't connect to API");
                 } else {
@@ -26,14 +27,12 @@ export default class HomeComponent extends Component {
             });
     }
 
-    render(){
+    render() {
         return (
             <div>
-                <NavBarComponent showSearchBar/>
-                <div className="movies">
-                    <p>!!MOVIES PLACEHOLDER!!</p>
-                </div>
+                <NavBarComponent />
+                <p>!!MOVIE DETAILS PLACEHOLDER!!</p>
             </div>
-        )
+        );
     }
-}  
+}

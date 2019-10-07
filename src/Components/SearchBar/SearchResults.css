@@ -1,0 +1,29 @@
+#searchResults {
+    position: absolute;
+    /* positioning & width */
+    top: 95%;
+    left: 0;
+    right: 0;
+
+    background:white;
+
+    border: 1px solid #888888;
+    border-radius: 3px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.search-res {
+    padding: 1px 5px;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-res:hover {
+    background: #f1f1f1;
+    cursor: pointer;
+}

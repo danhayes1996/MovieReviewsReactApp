@@ -1,5 +1,5 @@
 const LOCAL = 'http://localhost:8080/';
-const PUBLIC = null;
+// const PUBLIC = null;
 const BASE_URL = LOCAL;
 
 export const API_MOVIES_FIND    = BASE_URL + 'movie/find/';
