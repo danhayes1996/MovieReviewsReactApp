@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
 
-import HomeComponent from './Home';
+import HomeComponent from './Components/Home/Home';
+import NavBarComponent from './Components/Home/NavBar';
 
 function App() {
 
   return (
-    <HomeComponent />
+    <div>
+      <NavBarComponent />
+      <HomeComponent />
+    </div>
   );
 }
 

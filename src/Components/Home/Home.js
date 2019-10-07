@@ -7,7 +7,7 @@ export default class HomeComponent extends Component {
         super();
         this.state = {
             movies: []
-        }
+        };
     }
 
     componentDidMount() {
@@ -27,9 +27,7 @@ export default class HomeComponent extends Component {
     render(){
         return (
             <div className="movies">
-                {this.state.movies.map((movie, index) => {
-                    return <p key={"movie" + index}>{movie.name}</p>
-                })}
+                <p>!!MOVIES PLACEHOLDER!!</p>
             </div>
         )
     }
