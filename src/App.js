@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 
 import HomeComponent from './Components/Home/Home';
-import NavBarComponent from './Components/Home/NavBar';
+import NavBarComponent from './Components/NavBar/NavBar';
 
 function App() {
 
   return (
     <div>
-      <NavBarComponent />
+      <NavBarComponent showSearchBar/>
       <HomeComponent />
     </div>
   );

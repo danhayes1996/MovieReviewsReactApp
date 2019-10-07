@@ -1,0 +1,45 @@
+#nav {
+    padding: 5px;
+    background:#424242;
+    text-align: center;
+    min-width: 550px;
+    height: 32px;
+}
+
+#menu-btn {
+    float: left;
+}
+
+#user-control {
+    float: right;
+}
+
+#sign-in-out {
+    margin-left: 5px;
+}
+
+input[type="button"] {
+    height: 35px;
+    background:#424242;
+    color: white;
+
+    border-radius: 3px;
+    border: none;
+    border: 1px solid #424242;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+    border: 1px solid #888888;
+}
+
+/* when clicked and hovered over */
+input[type="button"]:hover:focus {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid white;
+}
