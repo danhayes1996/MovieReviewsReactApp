@@ -1,0 +1,26 @@
+.movie-preview {
+    margin: 0.5em 0.2em;
+    padding: 0.1em;
+
+    display: inline-block;
+    text-align: center;
+
+    border: 1px solid #888888;
+    border-radius: 5px;
+}
+
+.movie-preview:hover {
+    text-decoration: underline;
+    border: 1px solid #777777;
+    cursor: pointer;
+}
+
+.movie-preview p {
+    margin: 0;
+}
+
+.movie-preview img {
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}

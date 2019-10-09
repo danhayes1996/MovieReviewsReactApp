@@ -48,8 +48,9 @@ export default class SearchBarComponent extends Component {
         this.setState({showResults: true});
     }
 
-    hideResults(){
-        this.setState({showResults: false});
+    hideResults(event){
+        console.log(event);
+        // this.setState({showResults: false});
     }
 
     render() {

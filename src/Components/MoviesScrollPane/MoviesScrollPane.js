@@ -3,9 +3,9 @@ import axios from 'axios';
 
 import MoviePreviewComponent from '../MoviePreview/MoviePreview';
 
-import {API_MOVIES_NEW} from '../../Constants/api-const';
+import './MoviesScrollPane.css';
 
-export default class NewMoviesPaneComponent extends Component {
+export default class MoviesScrollPaneComponent extends Component {
 
     constructor(){
         super();
@@ -15,7 +15,7 @@ export default class NewMoviesPaneComponent extends Component {
     }
 
     componentDidMount() {
-        axios.get(API_MOVIES_NEW + this.props.count)
+        axios.get(this.props.api_call)
             .then(value => {
                 this.setState({movies: value.data});
             }).catch(error => {
@@ -29,11 +29,14 @@ export default class NewMoviesPaneComponent extends Component {
 
     render() {
         return (
-            <div id="new-movies-pane">
-                <h2>Recently Added</h2>
-                {this.state.movies.map((movie, index) => {
-                    return (<MoviePreviewComponent movie={movie} key={"movie" + index}/>);   
-                })}
+            <div className="sp-container">
+                <h2>{this.props.title}</h2>
+                <div className="scroll-pane">
+                    
+                    {this.state.movies.map((movie, index) => {
+                        return (<MoviePreviewComponent movie={movie} key={"movie" + index}/>);   
+                    })}
+                </div>
             </div>
         );
     }

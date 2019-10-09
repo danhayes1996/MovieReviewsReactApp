@@ -2,6 +2,7 @@ const LOCAL = 'http://localhost:8080/';
 // const PUBLIC = null;
 const BASE_URL = LOCAL;
 
+export const API_MOVIES_ALL     = BASE_URL + 'movie/all';
 export const API_MOVIES_FIND    = BASE_URL + 'movie/find/';
 export const API_MOVIE_GET      = BASE_URL + 'movie/get/';
 export const API_MOVIES_NEW     = BASE_URL + 'movie/new/';

@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 
 import NavBarComponent from '../NavBar/NavBar';
-import NewMoviesPaneComponent from '../NewMoviesPane/NewMoviesPane';
+import MoviesScrollPaneComponent from '../MoviesScrollPane/MoviesScrollPane';
+
+import {API_MOVIES_NEW, API_MOVIES_ALL} from '../../Constants/api-const';
+
 
 export default class HomeComponent extends Component {
 
@@ -13,25 +15,16 @@ export default class HomeComponent extends Component {
         };
     }
 
-    componentDidMount() {
-        axios.get('http://localhost:8080/movie/new/2')
-            .then(value => {
-                console.log(value);
-                this.setState({movies: value.data});
-            }).catch(error =>{
-                if(!error.response) {
-                    console.error("Error: Couldn't connect to API");
-                } else {
-                    console.error(error);
-                }
-            });
-    }
-
     render(){
         return (
             <div>
                 <NavBarComponent showSearchBar/>
-                <NewMoviesPaneComponent count={3}/>
+
+                {/* Recently Added Pane */}
+                <MoviesScrollPaneComponent title="Recently Added" api_call={API_MOVIES_NEW + 4}/>
+                
+                {/* REMOVE AFTER TESTING - All Movies Pane */}
+                <MoviesScrollPaneComponent title="All Movies" api_call={API_MOVIES_ALL} />
             </div>
         )
     }
