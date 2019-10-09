@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 import NavBarComponent from '../NavBar/NavBar';
+import NewMoviesPaneComponent from '../NewMoviesPane/NewMoviesPane';
 
 export default class HomeComponent extends Component {
 
@@ -30,9 +31,7 @@ export default class HomeComponent extends Component {
         return (
             <div>
                 <NavBarComponent showSearchBar/>
-                <div className="movies">
-                    <p>!!MOVIES PLACEHOLDER!!</p>
-                </div>
+                <NewMoviesPaneComponent count={3}/>
             </div>
         )
     }

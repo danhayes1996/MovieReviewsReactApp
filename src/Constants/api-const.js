@@ -4,6 +4,7 @@ const BASE_URL = LOCAL;
 
 export const API_MOVIES_FIND    = BASE_URL + 'movie/find/';
 export const API_MOVIE_GET      = BASE_URL + 'movie/get/';
+export const API_MOVIES_NEW     = BASE_URL + 'movie/new/';
 export const API_MOVIE_CREATE   = BASE_URL + 'movie/create';
 export const API_MOVIE_UPDATE   = BASE_URL + 'movie/update/';
 export const API_MOVIE_DELETE   = BASE_URL + 'movie/delete/';
