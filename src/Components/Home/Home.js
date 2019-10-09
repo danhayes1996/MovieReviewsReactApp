@@ -13,7 +13,7 @@ export default class HomeComponent extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8080/movie/all')
+        axios.get('http://localhost:8080/movie/new/2')
             .then(value => {
                 console.log(value);
                 this.setState({movies: value.data});
