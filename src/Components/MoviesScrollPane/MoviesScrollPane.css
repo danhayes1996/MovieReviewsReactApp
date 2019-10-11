@@ -19,8 +19,6 @@
 }
 
 .scroll-pane::-webkit-scrollbar-track {
-    margin: 0 1px;
-
     border-radius: 5px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
