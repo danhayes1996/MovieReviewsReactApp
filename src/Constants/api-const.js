@@ -6,11 +6,13 @@ export const API_MOVIES_ALL     = BASE_URL + 'movie/all';
 export const API_MOVIES_FIND    = BASE_URL + 'movie/find/';
 export const API_MOVIE_GET      = BASE_URL + 'movie/get/';
 export const API_MOVIES_NEW     = BASE_URL + 'movie/new/';
+export const API_MOVIES_BEST    = BASE_URL + 'movie/best/';
 export const API_MOVIE_CREATE   = BASE_URL + 'movie/create';
 export const API_MOVIE_UPDATE   = BASE_URL + 'movie/update/';
 export const API_MOVIE_DELETE   = BASE_URL + 'movie/delete/';
 
 export const API_USER_GET       = BASE_URL + 'user/get/';
+export const API_USER_AUTH      = BASE_URL + 'user/auth';
 export const API_USER_REVIEWS   = BASE_URL + 'user/getReviews/';
 export const API_USER_CREATE    = BASE_URL + 'user/create';
 export const API_USER_UPDATE    = BASE_URL + 'user/update/';

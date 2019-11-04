@@ -3,8 +3,7 @@ import React, {Component} from 'react';
 import NavBarComponent from '../NavBar/NavBar';
 import MoviesScrollPaneComponent from '../MoviesScrollPane/MoviesScrollPane';
 
-import {API_MOVIES_NEW, API_MOVIES_ALL} from '../../Constants/api-const';
-
+import {API_MOVIES_NEW, API_MOVIES_BEST, API_MOVIES_ALL} from '../../Constants/api-const';
 
 export default class HomeComponent extends Component {
 
@@ -23,6 +22,9 @@ export default class HomeComponent extends Component {
                 {/* Recently Added Pane */}
                 <MoviesScrollPaneComponent title="Recently Added" api_call={API_MOVIES_NEW + 4}/>
                 
+                {/* Highest Rating Pane */}
+                <MoviesScrollPaneComponent title="Highest Rating" api_call={API_MOVIES_BEST + 4}/>
+               
                 {/* REMOVE AFTER TESTING - All Movies Pane */}
                 <MoviesScrollPaneComponent title="All Movies" api_call={API_MOVIES_ALL} />
             </div>
