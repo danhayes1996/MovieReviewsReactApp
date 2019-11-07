@@ -61,7 +61,7 @@ export default class SearchBarComponent extends Component {
         return (
             <div id="searchContainer">
                 <div id="searchBar">
-                    <input id="search-txt" type="text" autoComplete="off" onKeyUp={this.findMovies} /*onBlur={this.hideResults}*/ />
+                    <input autoFocus id="search-txt" type="text" autoComplete="off" onKeyUp={this.findMovies} /*onBlur={this.hideResults}*/ />
                     <IconButton id="search-btn" aria-label="delete">
                         <SearchIcon fontSize="small" />
                     </IconButton>
